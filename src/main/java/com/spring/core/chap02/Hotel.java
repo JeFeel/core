@@ -7,6 +7,11 @@ public class Hotel {
     // 제어의 역전 (IoC) : 객체 생성의 제어권을 외부로 넘긴다
     // 의존성 주입 (DI) : 외부에서 생성된 객체를 주입받는 개념
 
+    /**
+     * @problem -   외부에서 객체를 가져온 덕분에 Hotel를 고칠 필요가 없음.
+     *              그러나 값을 바꾸기 위해 여전히 HotelManager를 일일이 고쳐야 하는 번거로움 발생
+     */
+
     // 레스토랑 객체에 의존
     private Restaurant restaurant;
 
@@ -37,6 +42,7 @@ public class Hotel {
 
         restaurant.order();
     }
+
 
 
 }
